@@ -1,0 +1,3 @@
+Solved this month challenge using arbitrary precision numbers. 
+It's possible to find a quick solution in Python with a simple script, thanks to Python's arbitrary precision integers.
+To find a better solution and earn myself a '*' i used a library for arbitrary precision arithmetic in C++.
