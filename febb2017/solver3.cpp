@@ -1,11 +1,12 @@
-#include<iostream>
-#include<vector>
-#include<algorithm>
+#include <iostream>
+#include <vector>
+#include <array>
+#include <algorithm>
 #include <omp.h>
 
-enum{ N = 24 };
+enum{ N = 28 };
 
-int fr(const std::vector<bool> & v)//, int s = 2)
+int fr(const std::array<bool,N>& v)//, int s = 2)
 {
 	int s = 2;
 	int r = 0;
@@ -33,17 +34,17 @@ int fr(const std::vector<bool> & v)//, int s = 2)
 	return r;
 }
 
-void fc(int N, int Ncore)
+void fc(int Ncore)
 {
 	//std::vector<bool> v(N);
-	std::vector<std::vector<bool>> v;
-	std::vector<bool> v1, v2;
+	std::vector<std::array<bool,N>> v;
+	std::array<bool,N> v1, v2;
 	
 	for(int i=0; i<N; i++) 
 	{
-		v1.push_back(false);
-		if(i < N/2) v2.push_back(false);
-		else v2.push_back(true);
+		v1[i] = false;
+		if(i < N/2) v2[i] = false;
+		else v2[i] = true;
 	}
 	
 	v.push_back(v1);
@@ -76,7 +77,7 @@ void fc(int N, int Ncore)
 int main()
 {
 	//for(int i = 3; i<25; i++) fc(i);
-	fc(N,2);
+	fc(2);
 	
 	return 0;
 }

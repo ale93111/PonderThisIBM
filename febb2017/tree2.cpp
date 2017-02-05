@@ -102,17 +102,17 @@ struct Tree
 
 int main()
 {
-	int N = 24;
+	int N = 3;
 	int Ncore = 2;
 	
 	Tree tree(N,{2,0});
 	
-	//tree.print();
-	tree.printsize();
+	tree.print();
+	//tree.printsize();
 	
 	//std::vector<bool> v = {0,0,0};
 	//std::cout << "r is: " << tree.search(v) << std::endl;
-	
+/*
 	std::vector<std::vector<bool>> v;
 	std::vector<bool> v1, v2;
 	
@@ -148,6 +148,6 @@ int main()
 	
 	//std::cout << "N = " << N << ", count = " << count << std::endl;
 	std::cout << "count = " << count << std::endl;
-
+*/
 	return 0;
 }
